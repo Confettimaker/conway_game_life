@@ -4,7 +4,6 @@
 #include "cell.h"
 
 using std::cout;
-using std::endl;
 using std::cin;
 
 void print(Cell ** grid, int n)
@@ -15,7 +14,7 @@ void print(Cell ** grid, int n)
     {
       cout << (grid[i][j].is_alive() ? '#' : ' ') << ' ';
     }
-    cout << endl;
+    cout << '\n';
   }
 }
 
@@ -58,7 +57,7 @@ int main()
     }
     usleep(100000);
     print(grid, n);
-    cout << endl;
+    cout << '\n';
   }
 
 
