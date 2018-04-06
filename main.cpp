@@ -20,12 +20,15 @@ void print(Cell ** grid, int n)
 
 int main()
 {
-  srand(time(NULL));
   int n = 0;
   bool alive;
   int cells_alive = 0;
+
+  srand(time(NULL));
+
   cout << "Grid size: ";
   cin >> n;
+  
   Cell ** grid = new Cell*[n];
 
   for (int i = 0;i < n;i++)
@@ -42,6 +45,8 @@ int main()
   }
 
   print(grid, n);
+
+  cout << '\n';
 
   while (cells_alive > 0)
   {
