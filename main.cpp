@@ -16,6 +16,7 @@ void print(Cell ** grid, int n)
     }
     cout << '\n';
   }
+  cout << '\n';
 }
 
 int main()
@@ -28,7 +29,7 @@ int main()
 
   cout << "Grid size: ";
   cin >> n;
-  
+
   Cell ** grid = new Cell*[n];
 
   for (int i = 0;i < n;i++)
@@ -46,8 +47,6 @@ int main()
 
   print(grid, n);
 
-  cout << '\n';
-
   while (cells_alive > 0)
   {
     cells_alive = 0;
@@ -62,7 +61,6 @@ int main()
     }
     usleep(100000);
     print(grid, n);
-    cout << '\n';
   }
 
 
